@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  build-cv:
+    build: .
+    command: "xelatex -output-directory=/tmp cv-Jonathan_Alves.tex"
+    volumes:
+      - "./input/cv-Jonathan_Alves.tex:/opt/Awesome-CV/cv-Jonathan_Alves.tex"
+      - "./input/sections:/opt/Awesome-CV/sections"
+      - "./input/img:/opt/Awesome-CV/img"
+      - "./output:/tmp"
